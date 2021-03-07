@@ -8,6 +8,14 @@ function createGrid(size) {
         div.classList.add('sketch-box');
         div.style['width'] = `calc(50vh/${size})`;
         div.style['height'] = `calc(50vh/${size})`;
+
+        div.addEventListener("mouseover", function () { 
+            const red = Math.floor(Math.random() * 255);
+            const green = Math.floor(Math.random() * 255);
+            const blue = Math.floor(Math.random() * 255);
+            div.style.background = `rgb(${red},${green},${blue})`; 
+        });
+
         containerDivElement.appendChild(div);
     }
 }
